@@ -1,0 +1,39 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #1eccb0;
+  --color-secondary: #08332c;
+  --color-success: #5ba41c;
+  --color-warning: #fbc82f;
+  --color-danger: #e02b27;
+
+  --color-dark: #141414;
+  --color-dark-light: #000000a6;
+
+  --color-light: #f2f3f3;
+  --color-light-deep: #e6e7e7;
+  --color-light-light: #fafafa;
+}
+
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentColor);
+  }
+
+  button,
+  [role="button"] {
+    cursor: pointer;
+  }
+  button:disabled,
+  [role="button"]:disabled {
+    cursor: default;
+  }
+}
+
+@utility ui-container {
+  @apply max-w-[1230px] mx-auto px-4;
+}
