@@ -8,7 +8,7 @@ const MainLayout = ({ children }: MainLayoutProps) => {
   return (
     <>
       <Navbar />
-      {children}
+      <main className="pt-16 pb-17 lg:pt-30 lg:pb-0">{children}</main>
     </>
   );
 };
