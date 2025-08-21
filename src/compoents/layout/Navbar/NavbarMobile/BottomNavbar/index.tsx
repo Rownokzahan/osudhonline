@@ -28,7 +28,7 @@ const navItems = [
 
 const BottomNavbar = () => {
   return (
-    <nav className="h-17 w-full px-4 shadow shadow-dark fixed bottom-0 flex items-center justify-between text-dark-light">
+    <nav className="h-17 w-full px-4 shadow shadow-dark fixed z-40 bottom-0 bg-white flex items-center justify-between text-dark-light">
       {navItems.map(({ Icon, label }, index) => (
         <div key={index} className="text-center flex flex-col gap-1 items-center">
           <Icon size={23} />
