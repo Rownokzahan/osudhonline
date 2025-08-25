@@ -20,8 +20,8 @@ const NavigationButton = ({
       className={clsx(
         "size-12 border rounded-full grid bg-white absolute top-1/2 -translate-y-1/2",
         {
-          "left-8": position === "prev",
-          "right-8": position === "next",
+          "left-4": position === "prev",
+          "right-4": position === "next",
         },
         "disabled:hidden"
       )}

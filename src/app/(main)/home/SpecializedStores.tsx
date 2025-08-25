@@ -26,7 +26,7 @@ const SpecializedStores = () => {
 
   return (
     <div className="lg:ui-container mt-4">
-      <h3 className="px-3 lg:px-0 lg:text-2xl font-black"> Specialized Stores </h3>
+      <h3 className="px-3 lg:px-0 lg:text-2xl font-black">Specialized Stores</h3>
 
       <div className="py-4 relative">
         {/* Carousel */}

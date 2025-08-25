@@ -1,6 +1,7 @@
 import Banner from "./home/Banner";
 import CashbackOffers from "./home/CashbackOffers";
 import SpecializedStores from "./home/SpecializedStores";
+import TrendingToday from "./home/TrendingToday";
 
 const HomePage = () => {
   return (
@@ -8,6 +9,7 @@ const HomePage = () => {
       <Banner />
       <SpecializedStores />
       <CashbackOffers />
+      <TrendingToday />
     </>
   );
 };
