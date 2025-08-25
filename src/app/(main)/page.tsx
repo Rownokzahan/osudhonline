@@ -1,4 +1,5 @@
 import Banner from "./home/Banner";
+import CashbackOffers from "./home/CashbackOffers";
 import SpecializedStores from "./home/SpecializedStores";
 
 const HomePage = () => {
@@ -6,6 +7,7 @@ const HomePage = () => {
     <>
       <Banner />
       <SpecializedStores />
+      <CashbackOffers />
     </>
   );
 };
