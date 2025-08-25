@@ -1,12 +1,11 @@
 "use client";
 
-import { useCallback, useEffect, useRef, useState } from "react";
+import { useRef } from "react";
 import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
-import { EmblaCarouselType } from "embla-carousel";
-import clsx from "clsx";
-import { MdKeyboardArrowRight } from "react-icons/md";
 import Link from "next/link";
+import CarouselNavigationButtons from "@/compoents/carousel/CarouselNavigationButtons";
+import CarouselDots from "@/compoents/carousel/CarouselDots";
 
 const carouselImages = [
   {
@@ -55,41 +54,6 @@ const carouselImages = [
   },
 ];
 
-const NavigationButton = ({
-  position,
-  emblaApi,
-}: {
-  position: "next" | "prev";
-  emblaApi?: EmblaCarouselType;
-}) => {
-  const handleClick = () => {
-    if (!emblaApi) return;
-    return position === "prev" ? emblaApi.scrollPrev() : emblaApi.scrollNext();
-  };
-
-  return (
-    <button
-      onClick={handleClick}
-      aria-label={position === "prev" ? "Previous slide" : "Next slide"}
-      className={clsx(
-        "size-12 border rounded-full grid bg-white absolute top-1/2 -translate-y-1/2",
-        {
-          "left-8": position === "prev",
-          "right-8": position === "next",
-        }
-      )}
-    >
-      <MdKeyboardArrowRight
-        size={24}
-        className={clsx(
-          "text-secondary place-self-center",
-          position === "prev" && "rotate-180"
-        )}
-      />
-    </button>
-  );
-};
-
 const BannerSlider = () => {
   const autoplay = useRef(
     Autoplay({ delay: 2000, stopOnInteraction: false, stopOnMouseEnter: true })
@@ -97,21 +61,6 @@ const BannerSlider = () => {
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true }, [
     autoplay.current,
   ]);
-
-  const [selectedIndex, setSelectedIndex] = useState(0);
-  const [scrollSnaps, setScrollSnaps] = useState<number[]>([]);
-
-  // Dots
-  const onSelect = useCallback((emblaApi: EmblaCarouselType) => {
-    setSelectedIndex(emblaApi.selectedScrollSnap());
-  }, []);
-
-  useEffect(() => {
-    if (!emblaApi) return;
-    onSelect(emblaApi);
-    setScrollSnaps(emblaApi.scrollSnapList());
-    emblaApi.on("select", onSelect);
-  }, [emblaApi, onSelect]);
 
   return (
     <div className="lg:ui-container sm:py-3 relative z-0">
@@ -139,24 +88,8 @@ const BannerSlider = () => {
         </div>
       </div>
 
-      <div className="hidden lg:block">
-        <NavigationButton position="prev" emblaApi={emblaApi} />
-        <NavigationButton position="next" emblaApi={emblaApi} />
-      </div>
-
-      {/* Dots */}
-      <div className="mt-3 flex justify-center items-center">
-        {scrollSnaps.map((_, idx) => (
-          <button
-            key={idx}
-            onClick={() => emblaApi && emblaApi.scrollTo(idx)}
-            className={clsx(
-              "h-2 rounded-full mx-[6px] duration-300 transition-all ease-in-out",
-              idx === selectedIndex ? "w-6 bg-secondary" : "w-2 bg-secondary/30"
-            )}
-          />
-        ))}
-      </div>
+      <CarouselNavigationButtons emblaApi={emblaApi} />
+      <CarouselDots emblaApi={emblaApi} />
     </div>
   );
 };
