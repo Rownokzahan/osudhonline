@@ -8,12 +8,12 @@ import TrendingToday from "./home/TrendingToday";
 const HomePage = () => {
   return (
     <>
-      <Banner />
+      {/* <Banner />
       <SpecializedStores />
       <CashbackOffers />
       <LimitedTimeDeals />
       <TrendingToday />
-      <NewArrivals />
+      <NewArrivals /> */}
     </>
   );
 };
