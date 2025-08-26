@@ -3,6 +3,8 @@
 @theme {
   --color-primary: #1eccb0;
   --color-secondary: #08332c;
+  --color-tertiary: #d9008d;
+
   --color-success: #5ba41c;
   --color-warning: #fbc82f;
   --color-danger: #e02b27;
@@ -10,9 +12,9 @@
   --color-dark: #141414;
   --color-dark-light: #000000a6;
 
-  --color-light: #f2f3f3;
-  --color-light-deep: #e6e7e7;
-  --color-light-light: #fafafa;
+  --color-light: #f5f5f5;
+  --color-light-deep: ;
+  --color-light-light: ;
 }
 
 @layer base {

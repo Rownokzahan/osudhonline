@@ -1,5 +1,6 @@
 import Banner from "./home/Banner";
 import CashbackOffers from "./home/CashbackOffers";
+import LimitedTimeDeals from "./home/LimitedTimeDeals";
 import SpecializedStores from "./home/SpecializedStores";
 import TrendingToday from "./home/TrendingToday";
 
@@ -9,6 +10,7 @@ const HomePage = () => {
       <Banner />
       <SpecializedStores />
       <CashbackOffers />
+      <LimitedTimeDeals />
       <TrendingToday />
     </>
   );
