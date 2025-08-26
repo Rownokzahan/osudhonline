@@ -34,7 +34,7 @@ const TrendingToday = () => {
             width={256}
             height={320}
             src={image}
-            alt={`Specialized Store ${index + 1}`}
+            alt={`Trending Today ${index + 1}`}
             className="w-full aspect-4/5 rounded-2xl object-cover"
           />
         </div>
