@@ -34,26 +34,18 @@ const DealCountdown = () => {
   }, []);
 
   return (
-    <div className="min-w-36 px-3 md:ps-4 flex">
-      <div className="place-self-center">
-        <h3 className="font-black text-white md:text-2xl">
-          Limited Time Deals
-        </h3>
-        <div className="mt-2 space-y-1">
-          <p className="text-[#ff99db] text-sm">Ends in</p>
+    <>
+      <h3 className="font-black text-white md:text-2xl">Limited Time Deals</h3>
+      <div className="mt-2 space-y-1">
+        <p className="text-[#ff99db] text-sm">Ends in</p>
 
-          <div className="flex items-center gap-1 text-sm font-bold text-white">
-            <span className="px-1 rounded bg-[#f50031]">{timeLeft.hours}</span>
-            <span className="px-1 rounded bg-[#f50031]">
-              {timeLeft.minutes}
-            </span>
-            <span className="px-1 rounded bg-[#f50031]">
-              {timeLeft.seconds}
-            </span>
-          </div>
+        <div className="flex items-center gap-1 text-sm font-bold text-white">
+          <span className="px-1 rounded bg-[#f50031]">{timeLeft.hours}</span>
+          <span className="px-1 rounded bg-[#f50031]">{timeLeft.minutes}</span>
+          <span className="px-1 rounded bg-[#f50031]">{timeLeft.seconds}</span>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 

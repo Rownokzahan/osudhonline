@@ -1,4 +1,5 @@
 import Banner from "./home/Banner";
+import BestSeller from "./home/BestSeller";
 import CashbackOffers from "./home/CashbackOffers";
 import LimitedTimeDeals from "./home/LimitedTimeDeals";
 import NewArrivals from "./home/NewArrivals";
@@ -16,6 +17,7 @@ const HomePage = () => {
       <TrendingToday />
       <ShopByCategory />
       <NewArrivals />
+      <BestSeller />
     </>
   );
 };

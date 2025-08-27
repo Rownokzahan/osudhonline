@@ -7,6 +7,10 @@ const nextConfig: NextConfig = {
         protocol: "https",
         hostname: "cdn.netmeds.tech",
       },
+      {
+        protocol: "https",
+        hostname: "cdn.pixelbin.io",
+      },
     ],
   },
 };
