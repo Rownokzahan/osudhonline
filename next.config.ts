@@ -2,7 +2,12 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   images: {
-    domains: ["cdn.netmeds.tech"],
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "cdn.netmeds.tech",
+      },
+    ],
   },
 };
 

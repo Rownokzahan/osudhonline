@@ -1,6 +1,5 @@
 import BaseCarousel from "@/compoents/carousel/BaseCarousel";
-import clsx from "clsx";
-import Image from "next/image";
+import BaseCarouselItem from "@/compoents/carousel/BaseCarousel/BaseCarouselItem";
 
 const sliderImages = [
   "https://cdn.netmeds.tech/v2/plain-cake-860195/netmed/wrkr/nmz/company/2/applications/65f562c1504a59a67f529ad4/theme/pictures/free/original/theme-image-1737548272526.jpeg",
@@ -15,22 +14,12 @@ const SpecializedStores = () => {
   return (
     <BaseCarousel title="Specialized Stores">
       {sliderImages.map((image, index) => (
-        <div
+        <BaseCarouselItem
           key={index}
-          className={clsx(
-            "min-w-0 pl-3",
-            "flex-[0_0_40%] lg:flex-[0_0_20%]",
-            "last:flex-[0_0_calc(40%+12px)] last:pr-3 lg:last:flex-[0_0_20%] lg:last:pr-0"
-          )}
-        >
-          <Image
-            width={256}
-            height={320}
-            src={image}
-            alt={`Specialized Store ${index + 1}`}
-            className="w-full aspect-4/5 rounded-2xl object-cover"
-          />
-        </div>
+          href=""
+          imgSrc={image}
+          imgAlt={`Specialized Store ${index + 1}`}
+        />
       ))}
     </BaseCarousel>
   );

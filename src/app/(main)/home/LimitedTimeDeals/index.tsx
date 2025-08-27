@@ -26,7 +26,7 @@ const LimitedTimeDeals = () => {
       >
         {/* Embla viewport */}
         <div
-          className="lg:overflow-hidden overflow-x-auto [&::-webkit-scrollbar]:hidden"
+          className="lg:overflow-hidden overflow-x-auto scrollbar-hidden"
           ref={emblaRef}
         >
           <div className="flex">

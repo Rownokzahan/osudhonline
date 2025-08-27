@@ -15,9 +15,9 @@ const CashbackOffers = () => {
         <div
           key={index}
           className={clsx(
-            "min-w-0 pl-3",
-            "flex-[0_0_calc(100%-12px)] lg:flex-[0_0_50%]",
-            "last:flex-[0_0_100%] last:pr-3 lg:last:flex-[0_0_50%] lg:last:pr-0"
+            "pl-3 flex-none",
+            "w-[90%] sm:w-[46%] lg:w-[50%]",
+            "last:pr-3 last:w-[calc(90%+12px)] last:sm:w-[calc(46%+12px)] last:lg:pr-0 last:lg:w-[50%]"
           )}
         >
           <Image

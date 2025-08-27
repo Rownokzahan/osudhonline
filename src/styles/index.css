@@ -36,6 +36,20 @@
   }
 }
 
+@layer utilities {
+  .ui-container {
+    @apply max-w-[1230px] mx-auto px-4;
+  }
+}
+
 @utility ui-container {
   @apply max-w-[1230px] mx-auto px-4;
+}
+
+@utility scrollbar-hidden {
+  -ms-overflow-style: none;     /* IE & old Edge */
+  scrollbar-width: none;        /* Firefox */
+}
+.scrollbar-hidden::-webkit-scrollbar {
+  display: none;                /* Chrome, Safari, Edge (Chromium), Opera */
 }
