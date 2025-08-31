@@ -1,7 +1,6 @@
 "use client";
 
-import FilterSection from "./components/FilterSection";
-import RangeSlider from "../../RangeSlider";
+import RangeSlider from "./RangeSlider";
 
 const PriceSelection = () => {
   const onRangeChange = (min: number, max: number) => {
@@ -9,7 +8,7 @@ const PriceSelection = () => {
   };
 
   return (
-    <FilterSection title="Price">
+    <>
       <RangeSlider
         defaultMin={30}
         defaultMax={1445}
@@ -17,7 +16,7 @@ const PriceSelection = () => {
         unitPosition="before"
         onRangeChange={onRangeChange}
       />
-    </FilterSection>
+    </>
   );
 };
 

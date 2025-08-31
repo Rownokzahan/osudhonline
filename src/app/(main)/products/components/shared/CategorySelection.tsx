@@ -1,13 +1,12 @@
-import FilterOption from "./components/FilterOption";
-import FilterSection from "./components/FilterSection";
+import FilterOption from "./FilterOption";
 
 const CategorySelection = () => {
   return (
-    <FilterSection title="Category">
+    <>
       <FilterOption label="Sugar Substitutes (Fitness)" />
       <FilterOption label="Protein Powders" />
       <FilterOption label="Vitamins" />
-    </FilterSection>
+    </>
   );
 };
 

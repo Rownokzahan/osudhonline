@@ -1,7 +1,8 @@
-import BrandSelection from "./BrandSelection";
-import CategorySelection from "./CategorySelection";
-import DiscountSelection from "./DiscountSelection";
-import PriceSelection from "./PriceSelection";
+import BrandSelection from "../../shared/BrandSelection";
+import PriceSelection from "../../shared/PriceSelection";
+import CategorySelection from "../../shared/CategorySelection";
+import FilterSection from "./FilterSection";
+import DiscountSelection from "../../shared/DiscountSelection";
 
 const FiltersSidebar = () => {
   return (
@@ -9,10 +10,21 @@ const FiltersSidebar = () => {
       <h3 className="py-2 text-2xl font-black">Filters</h3>
 
       <div className="divide-y">
-        <CategorySelection />
-        <BrandSelection />
-        <PriceSelection />
-        <DiscountSelection />
+        <FilterSection title="Category">
+          <CategorySelection />
+        </FilterSection>
+
+        <FilterSection title="Brands">
+          <BrandSelection />
+        </FilterSection>
+
+        <FilterSection title="Price">
+          <PriceSelection />
+        </FilterSection>
+
+        <FilterSection title="Discount">
+          <DiscountSelection />
+        </FilterSection>
       </div>
     </aside>
   );
