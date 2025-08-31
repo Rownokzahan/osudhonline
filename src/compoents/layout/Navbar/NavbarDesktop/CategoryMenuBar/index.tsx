@@ -77,7 +77,7 @@ const categories = [
 
 const CategoryMenuBar = () => {
   return (
-    <div className="bg-[#1e7b74]">
+    <div className="bg-secondary">
       <div className="h-12 ui-container flex items-center justify-between gap-6">
         {categories.map((cat) => (
           <div key={cat.label} className="h-full relative group/category">

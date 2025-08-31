@@ -1,3 +1,5 @@
+"use client";
+
 import { useState } from "react";
 import { FiMinus, FiPlus } from "react-icons/fi";
 
@@ -13,7 +15,7 @@ const AddToCartButton = ({}: AddToCartButtonProps) => {
       <div className="w-23 h-8 rounded-full bg-primary/15 flex items-center justify-between">
         <button
           onClick={() => setQuantity((prev) => prev - 1)}
-          className="size-8 rounded-full bg-primary text-secondary grid place-items-center"
+          className="size-8 rounded-full bg-primary text-dark-primary grid place-items-center"
         >
           <FiMinus />
         </button>
@@ -22,7 +24,7 @@ const AddToCartButton = ({}: AddToCartButtonProps) => {
 
         <button
           onClick={() => setQuantity((prev) => prev + 1)}
-          className="size-8 rounded-full bg-primary text-secondary grid place-items-center"
+          className="size-8 rounded-full bg-primary text-dark-primary grid place-items-center"
         >
           <FiPlus />
         </button>
@@ -33,7 +35,7 @@ const AddToCartButton = ({}: AddToCartButtonProps) => {
   return (
     <button
       onClick={() => setQuantity(1)}
-      className="w-23 h-8 rounded-full bg-primary text-secondary flex items-center justify-center gap-2"
+      className="w-23 h-8 rounded-full bg-primary text-dark-primary flex items-center justify-center gap-2"
     >
       <span className="font-bold">Add</span>
       <FiPlus />

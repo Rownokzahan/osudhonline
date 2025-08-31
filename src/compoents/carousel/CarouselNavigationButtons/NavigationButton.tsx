@@ -29,7 +29,7 @@ const NavigationButton = ({
       <MdKeyboardArrowRight
         size={24}
         className={clsx(
-          "text-secondary place-self-center",
+          "text-dark-primary place-self-center",
           position === "prev" && "rotate-180"
         )}
       />

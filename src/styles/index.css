@@ -2,7 +2,7 @@
 
 @theme {
   --color-primary: #1eccb0;
-  --color-secondary: #08332c;
+  --color-secondary: #1e7b74;
   --color-tertiary: #d9008d;
 
   --color-success: #5ba41c;
@@ -11,6 +11,7 @@
 
   --color-dark: #141414;
   --color-dark-light: #000000a6;
+  --color-dark-primary: #08332c;
 
   --color-light: #f5f5f5;
   --color-light-deep: ;
@@ -47,9 +48,22 @@
 }
 
 @utility scrollbar-hidden {
-  -ms-overflow-style: none;     /* IE & old Edge */
-  scrollbar-width: none;        /* Firefox */
+  -ms-overflow-style: none; /* IE & old Edge */
+  scrollbar-width: none; /* Firefox */
 }
 .scrollbar-hidden::-webkit-scrollbar {
-  display: none;                /* Chrome, Safari, Edge (Chromium), Opera */
+  display: none; /* Chrome, Safari, Edge (Chromium), Opera */
+}
+
+.rangeSlider {
+  grid-row: 1;
+  grid-column: 1;
+  pointer-events: none;
+  appearance: none;
+}
+
+.rangeSlider::-webkit-slider-thumb{
+  pointer-events: auto;
+  appearance: none;
+  @apply size-5 active:scale-120 rounded-full bg-primary cursor-grabbing
 }

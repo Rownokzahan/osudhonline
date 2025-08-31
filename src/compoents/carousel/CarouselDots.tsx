@@ -42,7 +42,7 @@ const CarouselDots = ({ emblaApi }: CarouselDotsProps) => {
           onClick={() => onDotButtonClick(index)}
           className={clsx(
             "h-2 rounded-full mx-[6px] duration-300 transition-all ease-in-out",
-            index === selectedIndex ? "w-6 bg-secondary" : "w-2 bg-secondary/30"
+            index === selectedIndex ? "w-6 bg-dark-primary" : "w-2 bg-dark-primary/30"
           )}
         />
       ))}

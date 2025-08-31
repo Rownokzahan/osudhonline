@@ -24,9 +24,8 @@ const ProductCard = ({ product }: ProductCardProps) => {
           />
         </figure>
 
-        <p className="line-clamp-2 text-dark-light text-sm">{name}</p>
-
-        <div className="h-15">
+        <div className="h-24">
+          <p className="line-clamp-2 text-dark-light text-sm">{name}</p>
           <div className="my-1 flex gap-2 items-center">
             <p className="font-bold text-sm">{price}</p>
             <p className="text-xs text-dark-light/70 line-through decoration-dark-light/30">
