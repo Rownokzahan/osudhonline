@@ -26,7 +26,7 @@ const FilterOption = ({ label }: FilterOptionProps) => {
         )}
       </span>
       <span
-        className={clsx("text-sm", isChecked ? "text-dark" : "text-dark-light")}
+        className={clsx("text-sm text-left", isChecked ? "text-dark" : "text-dark-light")}
       >
         {label}
       </span>

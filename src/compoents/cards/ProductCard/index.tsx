@@ -1,8 +1,8 @@
 import { Product } from "@/types";
 import Image from "next/image";
 import Link from "next/link";
-import { CiBookmark } from "react-icons/ci";
 import AddToCartButton from "./AddToCartButton";
+import SaveButton from "./SaveButton";
 
 interface ProductCardProps {
   product: Product;
@@ -26,6 +26,7 @@ const ProductCard = ({ product }: ProductCardProps) => {
 
         <div className="h-24">
           <p className="line-clamp-2 text-dark-light text-sm">{name}</p>
+          
           <div className="my-1 flex gap-2 items-center">
             <p className="font-bold text-sm">{price}</p>
             <p className="text-xs text-dark-light/70 line-through decoration-dark-light/30">
@@ -36,9 +37,9 @@ const ProductCard = ({ product }: ProductCardProps) => {
         </div>
       </Link>
 
-      <button className="absolute top-2 right-2">
-        <CiBookmark size={24} className="text-dark-light" />
-      </button>
+      <div className="absolute top-2 right-2">
+        <SaveButton productId={id} />
+      </div>
 
       <AddToCartButton productId={id} />
     </div>

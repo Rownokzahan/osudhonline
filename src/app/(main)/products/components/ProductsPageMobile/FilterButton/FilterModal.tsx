@@ -47,7 +47,7 @@ const FilterModal = ({ isModalOpen, closeModal }: FilterModalProps) => {
           ))}
         </ul>
 
-        <div className="flex-1 p-6">
+        <div className="flex-1 ps-4 p-6">
           {selectedFilter === "Category" && <CategorySelection />}
           {selectedFilter === "Brands" && <BrandSelection />}
           {selectedFilter === "Price" && <PriceSelection />}

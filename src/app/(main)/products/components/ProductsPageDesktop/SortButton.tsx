@@ -1,24 +1,17 @@
 "use client";
 
-import clsx from "clsx";
 import { useState } from "react";
 import { FaAngleDown, FaAngleUp } from "react-icons/fa";
-import { IoRadioButtonOffSharp } from "react-icons/io5";
-import { RiRadioButtonFill } from "react-icons/ri";
+import SortOptionsList, {
+  SortOption,
+  sortOptions,
+} from "../shared/SortOptionsList";
 
 const SortButton = () => {
-  const [open, setOpen] = useState(false);
-  const [selected, setSelected] = useState("Popularity");
+  const [open, setOpen] = useState(true);
+  const [selected, setSelected] = useState<SortOption>(sortOptions[0]);
 
-  const options = [
-    "Popularity",
-    "Price: High to Low",
-    "Price: Low to High",
-    "Discount: High to Low",
-    "Discount: Low to High",
-  ];
-
-  const handleSelect = (option: string) => {
+  const handleSelect = (option: SortOption) => {
     setSelected(option);
     setOpen(false); // close dropdown after selecting
   };
@@ -31,7 +24,7 @@ const SortButton = () => {
       >
         <span className="flex items-center gap-1">
           <span className="font-medium">Sort by:</span>
-          <span className="font-semibold">{selected}</span>
+          <span className="font-semibold">{selected.label}</span>
         </span>
 
         <span className="text-secondary">
@@ -40,25 +33,9 @@ const SortButton = () => {
       </button>
 
       {open && (
-        <ul className="w-full mt-3 py-3 rounded-2xl shadow-lg bg-white absolute z-10">
-          {options.map((option) => (
-            <li key={option}>
-              <button
-                onClick={() => handleSelect(option)}
-                className="w-full ps-6 pe-4 py-2 flex items-center gap-3 text-dark-light"
-              >
-                {selected === option ? (
-                  <RiRadioButtonFill size={22} className="text-primary" />
-                ) : (
-                  <IoRadioButtonOffSharp size={20} />
-                )}
-                <span className={clsx(selected === option && "text-dark font-bold")}>
-                  {option}
-                </span>
-              </button>
-            </li>
-          ))}
-        </ul>
+        <div className="w-full mt-3 rounded-2xl shadow-lg bg-white absolute z-10">
+          <SortOptionsList selectedSort={selected} onSelect={handleSelect} />
+        </div>
       )}
     </div>
   );
