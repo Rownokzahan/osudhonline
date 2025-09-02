@@ -4,6 +4,7 @@
   --color-primary: #1eccb0;
   --color-secondary: #1e7b74;
   --color-tertiary: #d9008d;
+  --color-accent: #6d17ce;
 
   --color-success: #5ba41c;
   --color-warning: #fbc82f;
@@ -62,8 +63,8 @@
   appearance: none;
 }
 
-.rangeSlider::-webkit-slider-thumb{
+.rangeSlider::-webkit-slider-thumb {
   pointer-events: auto;
   appearance: none;
-  @apply size-5 active:scale-120 rounded-full bg-primary cursor-grabbing
+  @apply size-5 active:scale-120 rounded-full bg-primary cursor-grabbing;
 }
