@@ -1,10 +1,10 @@
+import ProductsIntroCardCarousel from "@/compoents/carousel/ProductsIntroCardCarousel";
 import { products } from "@/data/products";
-import ProductsCarousel from "@/compoents/carousel/ProductsCarousel";
 import Image from "next/image";
 
 const BestSeller = () => {
   return (
-    <ProductsCarousel
+    <ProductsIntroCardCarousel
       products={products}
       backgroundClass="bg-[#f9e8e0]"
       FirstSlideContent={

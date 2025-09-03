@@ -6,17 +6,17 @@ import ProductCard from "../cards/ProductCard";
 import CarouselNavigationButtons from "./CarouselNavigationButtons";
 import clsx from "clsx";
 
-interface ProductsCarouselProps {
+interface ProductsIntroCardCarouselProps {
   products: Product[];
   backgroundClass: string;
   FirstSlideContent: React.ReactNode;
 }
 
-const ProductsCarousel = ({
+const ProductsIntroCardCarousel = ({
   products,
   backgroundClass,
   FirstSlideContent,
-}: ProductsCarouselProps) => {
+}: ProductsIntroCardCarouselProps) => {
   const [emblaRef, emblaApi] = useEmblaCarousel({
     active: true,
     watchDrag: false,
@@ -57,4 +57,4 @@ const ProductsCarousel = ({
   );
 };
 
-export default ProductsCarousel;
+export default ProductsIntroCardCarousel;
