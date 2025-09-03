@@ -5,19 +5,21 @@ import { PiShareFatFill } from "react-icons/pi";
 import ProductDetails from "../ProductDetails";
 import ProductGuarantees from "../ProductGuarantees";
 import Breadcrumb from "./Breadcrumb";
+import ProductsCarousel from "@/compoents/carousel/ProductsCarousel";
+import { products } from "@/data/products";
 
 const ProductPageDesktop = () => {
   return (
-    <>
+    <div className="ui-container">
       <Breadcrumb />
 
-      <div className="ui-container flex gap-12 relative">
-        <div className="h-max sticky top-[130px] space-y-3">
+      <div className="flex gap-12 relative">
+        <div className="h-max mb-2 sticky top-[130px] space-y-3">
           <ProductImageCarouselDesktop />
           <AddToCartButton productId="01" className="!w-92 ms-auto me-2" />
         </div>
 
-        <div className="flex-1">
+        <div className="min-w-0 flex-1">
           <div className="flex justify-between items-start">
             <div>
               <h3 className="text-lg font-bold text-secondary">Sugar Free</h3>
@@ -46,13 +48,23 @@ const ProductPageDesktop = () => {
             </div>
           </div>
 
-          <hr className="my-4" />
+          <hr className="my-6" />
 
           <ProductGuarantees />
           <ProductDetails />
+
+          <ProductsCarousel label="Similar products" products={products} />
+          <ProductsCarousel
+            label="Frequently bought together"
+            products={products}
+          />
         </div>
       </div>
-    </>
+
+      <div className="my-6 h-2 bg-dark-light/8" />
+
+      <ProductsCarousel label="Recently viewed products" products={products} />
+    </div>
   );
 };
 

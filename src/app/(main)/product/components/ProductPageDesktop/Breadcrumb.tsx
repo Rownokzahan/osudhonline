@@ -3,7 +3,7 @@ import { IoIosArrowForward } from "react-icons/io";
 
 const Breadcrumb = () => {
   return (
-    <ul className="ui-container py-6 font-medium text-sm flex items-center">
+    <ul className="py-6 font-medium text-sm flex items-center">
       <li className="text-secondary">
         <Link href={""}>Home</Link>
       </li>
