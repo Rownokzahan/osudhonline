@@ -43,12 +43,14 @@ const ProductImageCarouselDesktop = () => {
   return (
     <div className="flex items-center gap-4">
       <div>
-        <button
-          onClick={handlePrev}
-          className="mx-1 w-17 h-8 border rounded-xl grid place-items-center"
-        >
-          <FaChevronUp />
-        </button>
+        {images.length > 4 && (
+          <button
+            onClick={handlePrev}
+            className="mx-1 w-17 h-8 border rounded-xl grid place-items-center"
+          >
+            <FaChevronUp />
+          </button>
+        )}
 
         <div className="h-96 overflow-y-auto overflow-x-hidden scrollbar-hidden">
           {images.map((_, index) => (
@@ -74,12 +76,14 @@ const ProductImageCarouselDesktop = () => {
           ))}
         </div>
 
-        <button
-          onClick={handleNext}
-          className="mx-1 w-17 h-8 border rounded-xl grid place-items-center"
-        >
-          <FaChevronDown />
-        </button>
+        {images.length > 4 && (
+          <button
+            onClick={handleNext}
+            className="mx-1 w-17 h-8 border rounded-xl grid place-items-center"
+          >
+            <FaChevronDown />
+          </button>
+        )}
       </div>
 
       <figure className="size-96">
