@@ -29,14 +29,14 @@ const guarantees = [
 
 const ProductGuarantees = () => {
   return (
-    <div className="pb-4 flex justify-between">
+    <div className="my-6 pb-1 px-4 md:px-0 flex justify-between overflow-x-auto">
       {guarantees.map(({ Icon, label }, index) => (
-        <div key={index} className="space-y-2">
+        <div key={index} className="space-y-2 min-w-25 max-w-48">
           <div className="size-12 mx-auto rounded-full bg-accent/10 grid place-items-center">
             <Icon size={28} className="text-accent/50" />
           </div>
 
-          <p className="text-center font-medium text-dark/80 leading-4">
+          <p className="text-center font-medium text-dark/80 leading-4 text-xs md:text-base">
             {label}
           </p>
         </div>

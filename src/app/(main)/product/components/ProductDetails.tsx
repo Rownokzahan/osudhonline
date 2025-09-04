@@ -30,8 +30,8 @@ const ProductDetails = () => {
   const visibleDetails = expanded ? details : details.slice(0, 4);
 
   return (
-    <div className="mt-6 space-y-3">
-      <h3 className="text-2xl font-black">Product details</h3>
+    <div className="mt-6 px-4 lg:px-0 space-y-2 sm:space-y-3">
+      <h3 className="sm:text-2xl font-black">Product details</h3>
 
       <ul className="ps-5 list-disc list-outside space-y-1 text-sm">
         {visibleDetails.map((item, index) => (
