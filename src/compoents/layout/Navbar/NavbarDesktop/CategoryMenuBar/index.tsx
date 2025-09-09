@@ -13,7 +13,7 @@ const categories = [
     image: "/images/categories/medicine.avif",
     href: "",
     submenu: [
-      { label: "All Medicines", href: "" },
+      { label: "All Medicines", href: "/all-medicines" },
       { label: "Order Online", href: "" },
     ],
   },
