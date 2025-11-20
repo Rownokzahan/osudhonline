@@ -41,7 +41,7 @@ const ProductsCarousel = ({
                 key={product.id}
                 className={clsx(
                   "min-w-43 sm:min-w-54 first:min-w-47 first:sm:min-w-54",
-                  "pe-4 first:sm:!pl-0 first:pl-4"
+                  "pe-4 first:sm:pl-0! first:pl-4"
                 )}
               >
                 <div className="shadow-[0_4px_16px_0_rgba(0,0,0,0.08)] rounded-lg">

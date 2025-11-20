@@ -29,7 +29,7 @@ const ProductCardMobile = ({ product }: ProductCardMobileProps) => {
               By Suger Free
             </p>
 
-            <div className="my-2 flex gap-[6px] items-end flex-wrap">
+            <div className="my-2 flex gap-1.5 items-end flex-wrap">
               <p className="font-bold leading-4">{price}</p>
               <p className="text-xs text-dark-light/70 line-through decoration-dark-light/30">
                 {originalPrice}

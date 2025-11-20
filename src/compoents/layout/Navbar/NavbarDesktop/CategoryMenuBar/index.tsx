@@ -96,7 +96,7 @@ const CategoryMenuBar = () => {
 
             {/* Dropdown (if submenu exists) */}
             {cat.submenu.length > 0 && (
-              <ul className="w-56 py-2 pe-2 rounded-b-2xl bg-[#f5f5f5] absolute top-full left-0 hidden group-hover/category:block shadow-sm">
+              <ul className="w-56 py-2 pe-2 rounded-b-2xl bg-light absolute top-full left-0 hidden group-hover/category:block shadow-sm">
                 {cat.submenu.map((item) => (
                   <li
                     key={item.label}

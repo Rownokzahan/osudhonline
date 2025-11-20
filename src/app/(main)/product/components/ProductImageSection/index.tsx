@@ -9,7 +9,7 @@ const ProductImageSection = () => {
     <>
       <div className="hidden lg:block h-max mb-2 sticky z-10 top-[130px] space-y-3">
         <ProductImageCarouselDesktop />
-        <AddToCartButton productId="01" className="!w-92 ms-auto me-2" />
+        <AddToCartButton productId="01" className="w-92! ms-auto me-2" />
       </div>
 
       <div className="lg:hidden relative">
