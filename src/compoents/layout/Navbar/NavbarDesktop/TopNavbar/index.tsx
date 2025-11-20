@@ -20,14 +20,17 @@ const TopNavbar = () => {
           <SearchBoxDesktop />
 
           <div className="flex items-center gap-2">
+            {/* Cart link */}
             <Link
-              href="/"
+              href="/cart"
               className="p-2 rounded-full hover:bg-white/50 duration-100"
             >
               <PiShoppingCartSimpleFill size={24} />
             </Link>
+
+            {/* Sign in link */}
             <Link
-              href="/"
+              href="/login"
               className="px-4 py-2 rounded-full flex items-center gap-1 hover:bg-white/50 duration-100"
             >
               <HiMiniUser size={23} />
