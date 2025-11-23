@@ -28,7 +28,7 @@ const footerSections = [
       { label: "Medicines A To Z", href: "#" },
       { label: "Shop By Categories", href: "#" },
       { label: "Offers / Coupons", href: "#" },
-      { label: "FAQs", href: "#" },
+      { label: "FAQs", href: "all-faqs" },
       { label: "Contact Us", href: "#" },
     ],
   },
