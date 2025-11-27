@@ -1,5 +1,6 @@
 "use client";
 
+import clsx from "clsx";
 import { useState } from "react";
 
 interface RangeSliderProps {
@@ -61,7 +62,7 @@ const RangeSlider = ({
           }}
         />
 
-        {/* Sliders */}
+        {/* Min Slider */}
         <input
           type="range"
           min={defaultMin}
@@ -70,8 +71,10 @@ const RangeSlider = ({
           onChange={handleMinChange}
           onMouseUp={handleCommit}
           onTouchEnd={handleCommit}
-          className="rangeSlider absolute w-full top-0 left-0 pointer-events-auto"
+          className={clsx("rangeSlider", minValue === defaultMax - 1 && "z-10")} // Ensure min thumb stays selectable when both thumbs meet at the end
         />
+
+        {/* Max Slider */}
         <input
           type="range"
           min={defaultMin}
@@ -80,7 +83,7 @@ const RangeSlider = ({
           onChange={handleMaxChange}
           onMouseUp={handleCommit}
           onTouchEnd={handleCommit}
-          className="rangeSlider absolute w-full top-0 left-0 pointer-events-auto"
+          className="rangeSlider"
         />
       </div>
     </>

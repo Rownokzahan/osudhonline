@@ -61,10 +61,11 @@
   grid-column: 1;
   pointer-events: none;
   appearance: none;
+  @apply absolute w-full top-0 left-0;
 }
 
 .rangeSlider::-webkit-slider-thumb {
   pointer-events: auto;
   appearance: none;
-  @apply size-5 active:scale-120 rounded-full bg-primary cursor-grabbing;
+  @apply size-5 active:scale-120 rounded-full bg-primary cursor-grab active:cursor-grabbing;
 }
