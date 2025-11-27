@@ -62,7 +62,7 @@ const AllFAQsPage = () => {
         <div className="md:hidden mt-4 -mx-4 bg-secondary sticky top-16 overflow-hidden">
           <div className="h-14 flex overflow-x-auto text-light">
             {faqData.map(({ category }) => (
-              <div className="h-full px-4">
+              <div key={category} className="h-full px-4">
                 <button
                   key={category}
                   onClick={() => scrollToSection(category)}
