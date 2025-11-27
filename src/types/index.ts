@@ -6,3 +6,8 @@ export interface Product {
   originalPrice: string;
   discount: string;
 }
+
+export interface CartItem {
+  quantity: number;
+  product: Product;
+}

@@ -1,23 +1,17 @@
 "use client";
 
+import { CartItem } from "@/types";
 import clsx from "clsx";
 import { useEffect, useRef, useState } from "react";
 import { IoChevronDownOutline } from "react-icons/io5";
 
-const cartItem = {
-  quantity: 1,
-  product: {
-    id: "5",
-    name: "Dr. Reckeweg Vita-C Forte 10 ml Tonic 12's",
-    price: "₹1,074.47",
-    originalPrice: "₹1,390.00",
-    discount: "23% OFF",
-    image:
-      "https://cdn.netmeds.tech/v2/plain-cake-860195/netmed/wrkr/products/pictures/item/free/resize-w:180/Gw2ozipTfF-dr_reckeweg_vita_c_forte_10_ml_tonic_12s_0_0.jpg",
-  },
-};
+interface CartCardProps {
+  cartItem: CartItem;
+}
 
-const CartCard = () => {
+const CartCard = ({ cartItem }: CartCardProps) => {
+  const { product } = cartItem || {};
+
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const [quantity, setQuantity] = useState(cartItem.quantity);
 
@@ -39,12 +33,11 @@ const CartCard = () => {
 
   const quantityOptions = Array.from({ length: 12 }, (_, i) => i + 1);
 
-  const { product } = cartItem;
   const { image, name, price, originalPrice, discount } = product;
 
   return (
-    <div className="py-3">
-      <div className="grid grid-cols-[120px_1fr] gap-3">
+    <div className="px-4 lg:px-0 py-3">
+      <div className="grid grid-cols-[80px_1fr] sm:grid-cols-[120px_1fr] gap-3">
         <img src={image} alt="" />
 
         <div className="space-y-2">
