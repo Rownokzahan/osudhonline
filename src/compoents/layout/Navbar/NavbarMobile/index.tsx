@@ -1,10 +1,10 @@
 import BottomNavbar from "./BottomNavbar";
-import SearchBar from "./SearchBar";
+import TopBarMobile from "./TopBarMobile";
 
 const NavbarMobile = () => {
   return (
     <div className="lg:hidden">
-      <SearchBar />
+      <TopBarMobile />
       <BottomNavbar />
     </div>
   );
