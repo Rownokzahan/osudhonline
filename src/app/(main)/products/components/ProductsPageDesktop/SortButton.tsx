@@ -8,7 +8,7 @@ import SortOptionsList, {
 } from "../shared/SortOptionsList";
 
 const SortButton = () => {
-  const [open, setOpen] = useState(true);
+  const [open, setOpen] = useState(false);
   const [selected, setSelected] = useState<SortOption>(sortOptions[0]);
 
   const handleSelect = (option: SortOption) => {
