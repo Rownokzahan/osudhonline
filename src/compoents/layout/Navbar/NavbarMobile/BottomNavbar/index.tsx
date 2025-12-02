@@ -19,7 +19,10 @@ const BottomNavbar = () => {
         <span>Home</span>
       </Link>
 
-      <Link href={"/"} className="text-center flex flex-col gap-1 items-center">
+      <Link
+        href="/all-categories"
+        className="text-center flex flex-col gap-1 items-center"
+      >
         <TfiMenuAlt size={23} />
         <span>Category</span>
       </Link>

@@ -5,7 +5,7 @@ const categories = [
   {
     label: "All Categories",
     image: "/images/categories/all-categories.avif",
-    href: "",
+    href: "/all-categories",
     submenu: [],
   },
   {
