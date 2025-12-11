@@ -1,9 +1,12 @@
+"use client"
+
 import clsx from "clsx";
-import Link from "next/link";
+import { BsCapsulePill } from "react-icons/bs";
 import { GiMedicalPack } from "react-icons/gi";
-import { HiBeaker, HiUser } from "react-icons/hi2";
+import { HiUser } from "react-icons/hi2";
 import { PiShoppingCartSimpleFill } from "react-icons/pi";
 import { TfiMenuAlt } from "react-icons/tfi";
+import NavItem from "./NavItem";
 
 const BottomNavbar = () => {
   return (
@@ -14,46 +17,17 @@ const BottomNavbar = () => {
         "flex items-center justify-between"
       )}
     >
-      <Link href={"/"} className="text-center flex flex-col gap-1 items-center">
-        <GiMedicalPack size={23} className="text-success" />
-        <span>Home</span>
-      </Link>
+      <NavItem label="Home" href="/" Icon={GiMedicalPack} />
+      <NavItem label="Category" href="/all-categories" Icon={TfiMenuAlt} />
+      <NavItem label="Account" href="/" Icon={HiUser} />
+      <NavItem label="Medicines" href="/all-medicines" Icon={BsCapsulePill} />
 
-      <Link
-        href="/all-categories"
-        className="text-center flex flex-col gap-1 items-center"
-      >
-        <TfiMenuAlt size={23} />
-        <span>Category</span>
-      </Link>
-
-      <Link href={"/"} className="text-center flex flex-col gap-1 items-center">
-        <HiUser size={23} />
-        <span>Account</span>
-      </Link>
-
-      <Link href={"/"} className="text-center flex flex-col gap-1 items-center">
-        <HiBeaker size={23} />
-        <span>Lab Tests</span>
-      </Link>
-
-      <Link
-        href={"/cart"}
-        className="text-center flex flex-col gap-1 items-center relative"
-      >
-        <PiShoppingCartSimpleFill size={23} />
-        <span>Cart</span>
-
-        <span
-          className={clsx(
-            "size-5 rounded-full bg-tertiary grid place-items-center",
-            "text-light font-semibold text-xs",
-            "absolute -top-2 -right-2"
-          )}
-        >
-          2
-        </span>
-      </Link>
+      <NavItem
+        label="Cart"
+        href="/cart"
+        Icon={PiShoppingCartSimpleFill}
+        badge={0}
+      />
     </nav>
   );
 };
