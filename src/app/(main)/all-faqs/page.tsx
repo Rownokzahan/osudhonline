@@ -27,7 +27,6 @@ const AllFAQsPage = () => {
     <div className="ui-container">
       <h2 className="pt-6 text-2xl font-black">All FAQs</h2>
 
-      
       <div className="pb-6 md:pt-6 grid md:grid-cols-[34%_1fr] gap-4">
         {/* Sidebar navigation for larger screens */}
         <FAQSidebar
@@ -51,7 +50,7 @@ const AllFAQsPage = () => {
               ref={(el) => {
                 sectionRefs.current[category] = el;
               }}
-              className="scroll-mt-36"
+              className="scroll-mt-36 md:scroll-mt-22 lg:scroll-mt-36"
             >
               <h3 className="font-black">{category}</h3>
 
