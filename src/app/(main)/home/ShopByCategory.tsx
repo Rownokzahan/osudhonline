@@ -43,12 +43,6 @@ const categories = [
       "https://cdn.netmeds.tech/v2/plain-cake-860195/netmed/wrkr/nmz/company/2/applications/65f562c1504a59a67f529ad4/theme/pictures/free/original/theme-image-1716811610519.png",
   },
   {
-    id: "sexual-wellness",
-    name: "Sexual Wellness",
-    image:
-      "https://cdn.netmeds.tech/v2/plain-cake-860195/netmed/wrkr/nmz/company/2/applications/65f562c1504a59a67f529ad4/theme/pictures/free/original/theme-image-1711690714453.png",
-  },
-  {
     id: "surgicals",
     name: "Surgicals",
     image:

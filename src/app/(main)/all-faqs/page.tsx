@@ -1,10 +1,10 @@
 "use client";
 
-import clsx from "clsx";
 import { faqData } from "./faqData";
-import { FaAngleRight } from "react-icons/fa6";
 import { useRef, useState } from "react";
-import FAQAccordionItem from "./FAQAccordionItem";
+import FAQAccordionItem from "./components/FAQAccordionItem";
+import FAQSidebar from "./components/FAQSidebar";
+import FAQMobileNav from "./components/FAQMobileNav";
 
 const AllFAQsPage = () => {
   const [activeFAQItem, setActiveFAQItem] = useState("");
@@ -27,57 +27,21 @@ const AllFAQsPage = () => {
     <div className="ui-container">
       <h2 className="pt-6 text-2xl font-black">All FAQs</h2>
 
+      
       <div className="pb-6 md:pt-6 grid md:grid-cols-[34%_1fr] gap-4">
         {/* Sidebar navigation for larger screens */}
-        <ul className="hidden md:block h-max sticky lg:top-36 md:top-20 py-2 px-1 border rounded-3xl divide-y">
-          {faqData.map(({ category }) => (
-            <li key={category} className="h-15 px-3 flex items-center">
-              <button
-                onClick={() => scrollToSection(category)}
-                className="w-full flex items-center justify-between"
-              >
-                <span
-                  className={clsx(
-                    "text-left",
-                    activeCategory === category
-                      ? "font-bold text-dark"
-                      : "font-medium text-dark-light"
-                  )}
-                >
-                  {category}
-                </span>
-                <FaAngleRight
-                  className={clsx(
-                    activeCategory === category
-                      ? "text-accent"
-                      : "text-dark-light"
-                  )}
-                />
-              </button>
-            </li>
-          ))}
-        </ul>
+        <FAQSidebar
+          categories={faqData.map((f) => f.category)}
+          activeCategory={activeCategory}
+          onSelectCategory={scrollToSection}
+        />
 
         {/* Horizontal scroll navigation for smaller screens */}
-        <div className="md:hidden mt-4 -mx-4 bg-secondary sticky top-16 overflow-hidden">
-          <div className="h-14 flex overflow-x-auto text-light">
-            {faqData.map(({ category }) => (
-              <div key={category} className="h-full px-4">
-                <button
-                  key={category}
-                  onClick={() => scrollToSection(category)}
-                  className="h-full relative"
-                >
-                  <span className="text-left text-nowrap">{category}</span>
-
-                  {activeCategory === category && (
-                    <span className="h-1 w-full absolute left-0 bottom-0 bg-primary" />
-                  )}
-                </button>
-              </div>
-            ))}
-          </div>
-        </div>
+        <FAQMobileNav
+          categories={faqData.map((f) => f.category)}
+          activeCategory={activeCategory}
+          onSelectCategory={scrollToSection}
+        />
 
         {/* FAQ content sections */}
         <div className="flex-1 md:px-6 space-y-6">
