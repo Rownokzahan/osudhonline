@@ -6,15 +6,27 @@ import SaveButton from "./SaveButton";
 
 interface ProductCardProps {
   product: Product;
+  fullWidthButton?: boolean;
 }
 
-const ProductCard = ({ product }: ProductCardProps) => {
-  const { id, name, price, originalPrice, discount, image } = product;
+const ProductCard = ({
+  product,
+  fullWidthButton = false,
+}: ProductCardProps) => {
+  const {
+    id,
+    name,
+    image,
+    manufacturer,
+    currentPrice,
+    originalPrice,
+    discountPercentage,
+  } = product;
 
   return (
-    <div className="p-2 rounded-2xl bg-white relative">
+    <div className="p-3 rounded-2xl bg-white relative">
       <Link href={""}>
-        <figure className="w-full mb-2 aspect-square">
+        <figure className="w-full aspect-square">
           <Image
             width={180}
             height={180}
@@ -24,16 +36,20 @@ const ProductCard = ({ product }: ProductCardProps) => {
           />
         </figure>
 
-        <div className="h-24">
-          <p className="line-clamp-2 text-dark-light text-sm">{name}</p>
-          
-          <div className="my-1 flex gap-2 items-center">
-            <p className="font-bold text-sm">{price}</p>
-            <p className="text-xs text-dark-light/70 line-through decoration-dark-light/30">
-              {originalPrice}
+        <div className="my-3 h-26 space-y-1">
+          <h3 className="line-clamp-2 font-bold text-sm">{name}</h3>
+
+          <p className="text-dark-light/60 text-xs font-semibold">
+            By {manufacturer}
+          </p>
+
+          <div className="min-w-0 flex flex-wrap gap-x-2 items-center text-sm font-semibold">
+            <p className="text-base font-bold">₹{currentPrice}</p>
+            <p className="text-dark-light/70 line-through decoration-dark-light/30">
+              ₹{originalPrice}
             </p>
+            <p className="text-tertiary">{discountPercentage}% OFF</p>
           </div>
-          <p className="text-xs font-semibold text-tertiary">{discount}</p>
         </div>
       </Link>
 
@@ -41,7 +57,7 @@ const ProductCard = ({ product }: ProductCardProps) => {
         <SaveButton productId={id} />
       </div>
 
-      <AddToCartButton productId={id} />
+      <AddToCartButton productId={id} isFullWidth={fullWidthButton} />
     </div>
   );
 };

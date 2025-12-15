@@ -1,38 +1,44 @@
 "use client";
 
+import { Id } from "@/types";
 import clsx from "clsx";
 import { useState } from "react";
 import { FiMinus, FiPlus } from "react-icons/fi";
 
 interface AddToCartButtonProps {
-  productId: string;
+  productId: Id;
   className?: string;
+  isFullWidth?: boolean;
 }
 
-const AddToCartButton = ({ className }: AddToCartButtonProps) => {
+const AddToCartButton = ({
+  className,
+  isFullWidth = false,
+}: AddToCartButtonProps) => {
   const [quantity, setQuantity] = useState(0);
+
+  const baseClass = clsx(
+    isFullWidth ? "w-full" : "w-23",
+    "h-8 rounded-full flex items-center",
+    className
+  );
+
+  const iconBtn =
+    "size-8 rounded-full bg-primary text-dark-primary grid place-items-center";
+
+  const increment = () => setQuantity((prev) => prev + 1);
+  const decrement = () => setQuantity((prev) => Math.max(0, prev - 1));
 
   if (quantity > 0) {
     return (
-      <div
-        className={clsx(
-          "w-23 h-8 rounded-full bg-primary/15 flex items-center justify-between",
-          className
-        )}
-      >
-        <button
-          onClick={() => setQuantity((prev) => prev - 1)}
-          className="size-8 rounded-full bg-primary text-dark-primary grid place-items-center"
-        >
+      <div className={clsx(baseClass, "bg-primary/15 justify-between")}>
+        <button onClick={decrement} className={iconBtn}>
           <FiMinus />
         </button>
 
         <span className="font-medium">{quantity}</span>
 
-        <button
-          onClick={() => setQuantity((prev) => prev + 1)}
-          className="size-8 rounded-full bg-primary text-dark-primary grid place-items-center"
-        >
+        <button onClick={increment} className={iconBtn}>
           <FiPlus />
         </button>
       </div>
@@ -43,8 +49,8 @@ const AddToCartButton = ({ className }: AddToCartButtonProps) => {
     <button
       onClick={() => setQuantity(1)}
       className={clsx(
-        "w-23 h-8 rounded-full bg-primary text-dark-primary flex items-center justify-center gap-2",
-        className
+        baseClass,
+        "bg-primary text-dark-primary justify-center gap-2"
       )}
     >
       <span className="font-bold">Add</span>

@@ -8,7 +8,7 @@ interface ProductCardMobileProps {
 }
 
 const ProductCardMobile = ({ product }: ProductCardMobileProps) => {
-  const { id, name, price, originalPrice, discount, image } = product;
+  const { id, name, currentPrice, originalPrice, discountPercentage, image } = product;
 
   return (
     <div className="space-y-1">
@@ -30,12 +30,12 @@ const ProductCardMobile = ({ product }: ProductCardMobileProps) => {
             </p>
 
             <div className="my-2 flex gap-1.5 items-end flex-wrap">
-              <p className="font-bold leading-4">{price}</p>
+              <p className="font-bold leading-4">{currentPrice}</p>
               <p className="text-xs text-dark-light/70 line-through decoration-dark-light/30">
                 {originalPrice}
               </p>
 
-              <p className="text-xs text-tertiary">{discount}</p>
+              <p className="text-xs text-tertiary">{discountPercentage}%</p>
             </div>
           </div>
         </div>

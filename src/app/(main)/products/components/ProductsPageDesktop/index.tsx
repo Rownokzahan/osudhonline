@@ -25,8 +25,8 @@ const ProductsPageDesktop = () => {
 
           <div className="grid grid-cols-3 gap-4">
             {products.map((product) => (
-              <div key={product.id} className="pt-4 border rounded-2xl">
-                <ProductCard product={product} />
+              <div key={product.id} className="p-1 border rounded-2xl">
+                <ProductCard product={product} fullWidthButton={true} />
               </div>
             ))}
           </div>

@@ -1,7 +1,8 @@
+import { Id } from "@/types";
 import { CiBookmark } from "react-icons/ci";
 
 interface SaveButtonProps {
-  productId: string;
+  productId: Id;
 }
 
 const SaveButton = ({}: SaveButtonProps) => {
