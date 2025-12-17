@@ -2,9 +2,9 @@
 
 import { Product } from "@/types";
 import useEmblaCarousel from "embla-carousel-react";
-import ProductCard from "../cards/ProductCard";
 import CarouselNavigationButtons from "./CarouselNavigationButtons";
 import clsx from "clsx";
+import ProductCard from "../ui/ProductCard";
 
 interface ProductsCarouselProps {
   label: string;

@@ -1,4 +1,4 @@
-import AddToCartButton from "@/compoents/cards/ProductCard/AddToCartButton";
+import AddToCartButton from "@/compoents/ui/AddToCartButton";
 import ProductImageCarouselDesktop from "./ProductImageCarouselDesktop";
 import ProductImageCarouselMobile from "./ProductImageCarouselMobile";
 import SaveButton from "@/compoents/cards/ProductCard/SaveButton";

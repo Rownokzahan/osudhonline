@@ -2,7 +2,7 @@ import ProductsCarousel from "@/compoents/carousel/ProductsCarousel";
 import { products } from "@/data/products";
 import RatingsAndReviews from "./components/RatingsAndReviews";
 import Breadcrumb from "./components/Breadcrumb";
-import AddToCartButton from "@/compoents/cards/ProductCard/AddToCartButton";
+import AddToCartButton from "@/compoents/ui/AddToCartButton";
 import ProductGuarantees from "./components/ProductGuarantees";
 import ProductDetails from "./components/ProductDetails";
 import SaveButton from "@/compoents/cards/ProductCard/SaveButton";

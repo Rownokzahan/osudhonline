@@ -1,13 +1,13 @@
 "use client";
 
 import { useState } from "react";
-import { FaAngleDown, FaAngleUp } from "react-icons/fa";
 import SortOptionsList, {
   SortOption,
   sortOptions,
 } from "../shared/SortOptionsList";
+import { FaAngleDown, FaAngleUp } from "react-icons/fa";
 
-const SortButton = () => {
+const SortDropdown = () => {
   const [open, setOpen] = useState(false);
   const [selected, setSelected] = useState<SortOption>(sortOptions[0]);
 
@@ -41,4 +41,4 @@ const SortButton = () => {
   );
 };
 
-export default SortButton;
+export default SortDropdown;

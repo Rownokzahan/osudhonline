@@ -1,12 +1,12 @@
-import BrandSelection from "../../shared/BrandSelection";
-import PriceSelection from "../../shared/PriceSelection";
-import CategorySelection from "../../shared/CategorySelection";
+import BrandSelection from "../shared/BrandSelection";
+import PriceSelection from "../shared/PriceSelection";
+import CategorySelection from "../shared/CategorySelection";
 import FilterSection from "./FilterSection";
-import DiscountSelection from "../../shared/DiscountSelection";
+import DiscountSelection from "../shared/DiscountSelection";
 
-const FiltersSidebar = () => {
+const FiltersSidebarDesktop = () => {
   return (
-    <aside className="h-max p-4 pt-2 border rounded-2xl">
+    <aside className="hidden lg:block sticky top-36 h-max p-4 pt-2 border rounded-2xl">
       <h3 className="py-2 text-2xl font-black">Filters</h3>
 
       <div className="divide-y">
@@ -30,4 +30,4 @@ const FiltersSidebar = () => {
   );
 };
 
-export default FiltersSidebar;
+export default FiltersSidebarDesktop;

@@ -8,23 +8,18 @@ import { FiMinus, FiPlus } from "react-icons/fi";
 interface AddToCartButtonProps {
   productId: Id;
   className?: string;
-  isFullWidth?: boolean;
 }
 
-const AddToCartButton = ({
-  className,
-  isFullWidth = false,
-}: AddToCartButtonProps) => {
+const AddToCartButton = ({ className }: AddToCartButtonProps) => {
   const [quantity, setQuantity] = useState(0);
 
   const baseClass = clsx(
-    isFullWidth ? "w-full" : "w-23",
     "h-8 rounded-full flex items-center",
     className
   );
 
   const iconBtn =
-    "size-8 rounded-full bg-primary text-dark-primary grid place-items-center";
+    "h-full aspect-square rounded-full bg-primary text-dark-primary grid place-items-center";
 
   const increment = () => setQuantity((prev) => prev + 1);
   const decrement = () => setQuantity((prev) => Math.max(0, prev - 1));

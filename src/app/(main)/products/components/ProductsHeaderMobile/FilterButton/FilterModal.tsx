@@ -1,10 +1,11 @@
 import clsx from "clsx";
 import { IoMdClose } from "react-icons/io";
 import { useState } from "react";
-import PriceSelection from "../../shared/PriceSelection";
 import CategorySelection from "../../shared/CategorySelection";
 import BrandSelection from "../../shared/BrandSelection";
+import PriceSelection from "../../shared/PriceSelection";
 import DiscountSelection from "../../shared/DiscountSelection";
+
 
 interface FilterModalProps {
   isModalOpen: boolean;

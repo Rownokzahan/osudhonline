@@ -1,11 +1,8 @@
 "use client";
 
 import { useState } from "react";
-import SortOptionsList, {
-  SortOption,
-  sortOptions,
-} from "../../shared/SortOptionsList";
 import { IoMdClose } from "react-icons/io";
+import SortOptionsList, { SortOption, sortOptions } from "../../shared/SortOptionsList";
 
 interface SortModalProps {
   isModalOpen: boolean;
