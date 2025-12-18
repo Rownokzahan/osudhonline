@@ -27,11 +27,11 @@ const links = [
 const LegalInfoPage = () => {
   return (
     <>
-      <header className="ui-container mt-6">
+      <header className="">
         <h1 className="text-2xl font-black">Legal Information</h1>
       </header>
 
-      <ul className="ui-container my-6 space-y-2 text-dark-light font-bold">
+      <ul className="my-6 space-y-2 text-dark-light font-bold">
         {links.map((link, index) => {
           const { href, label } = link || {};
 
