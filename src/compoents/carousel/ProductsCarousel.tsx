@@ -4,7 +4,7 @@ import { Product } from "@/types";
 import useEmblaCarousel from "embla-carousel-react";
 import CarouselNavigationButtons from "./CarouselNavigationButtons";
 import clsx from "clsx";
-import ProductCard from "../ui/ProductCard";
+import CarouselProductCard from "../ui/CarouselProductCard";
 
 interface ProductsCarouselProps {
   label: string;
@@ -45,7 +45,7 @@ const ProductsCarousel = ({
                 )}
               >
                 <div className="shadow-[0_4px_16px_0_rgba(0,0,0,0.08)] rounded-lg">
-                  <ProductCard product={product} />
+                  <CarouselProductCard product={product} />
                 </div>
               </div>
             ))}

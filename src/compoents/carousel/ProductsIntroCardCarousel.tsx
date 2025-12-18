@@ -4,7 +4,7 @@ import { Product } from "@/types";
 import useEmblaCarousel from "embla-carousel-react";
 import CarouselNavigationButtons from "./CarouselNavigationButtons";
 import clsx from "clsx";
-import ProductCard from "../ui/ProductCard";
+import CarouselProductCard from "../ui/CarouselProductCard";
 
 interface ProductsIntroCardCarouselProps {
   products: Product[];
@@ -39,13 +39,13 @@ const ProductsIntroCardCarousel = ({
           ref={emblaRef}
         >
           <div className="flex">
-            <div className="min-w-36 sm:min-w-40 px-4 relative">
+            <div className="min-w-34 sm:min-w-40 px-3 relative">
               <div className="mt-[40%]">{FirstSlideContent}</div>
             </div>
 
             {products.map((product) => (
-              <div key={product.id} className="min-w-37 sm:min-w-44 pe-3">
-                <ProductCard product={product} />
+              <div key={product.id} className="min-w-42 sm:min-w-49 pe-3">
+                <CarouselProductCard product={product} />
               </div>
             ))}
           </div>
