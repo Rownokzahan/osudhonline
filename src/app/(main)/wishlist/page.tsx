@@ -1,4 +1,6 @@
+import ProductsCarousel from "@/compoents/carousel/ProductsCarousel";
 import WishlistProducts from "./components/WishlistProducts";
+import { products } from "@/data/products";
 
 const WishlistPage = () => {
   return (
@@ -8,6 +10,13 @@ const WishlistPage = () => {
       </div>
 
       <WishlistProducts />
+
+      <div className="mt-8 ui-container">
+        <ProductsCarousel
+          label="Recently viewed products"
+          products={products}
+        />
+      </div>
     </>
   );
 };
