@@ -35,7 +35,7 @@ const AddAddressDrawer = ({ isOpen, closeDrawer }: AddAddressDrawerProps) => {
           </button>
         </div>
 
-        <AddAddressForm />
+        {isOpen && <AddAddressForm />}
       </div>
     </>
   );

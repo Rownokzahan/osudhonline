@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import AddAddressDrawer from "./AddAddressButton/AddAddressDrawer";
 
 const AddAddressButton = () => {
-  const [isOpen, setIsOpen] = useState(true);
+  const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
     if (isOpen) {
