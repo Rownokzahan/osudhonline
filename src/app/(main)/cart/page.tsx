@@ -1,4 +1,4 @@
-import ProductsCarousel from "@/compoents/carousel/ProductsCarousel";
+import ProductsCarousel from "@/components/carousel/ProductsCarousel";
 import { products } from "@/data/products";
 import CartContent from "./components/CartContent";
 

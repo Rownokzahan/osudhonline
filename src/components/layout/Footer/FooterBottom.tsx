@@ -1,4 +1,4 @@
-import Logo from "@/compoents/ui/Logo";
+import Logo from "@/components/ui/Logo";
 
 const FooterBottom = () => {
   return (

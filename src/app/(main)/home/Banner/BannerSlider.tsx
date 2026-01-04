@@ -4,8 +4,8 @@ import { useRef } from "react";
 import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
 import Link from "next/link";
-import CarouselNavigationButtons from "@/compoents/carousel/CarouselNavigationButtons";
-import CarouselDots from "@/compoents/carousel/CarouselDots";
+import CarouselNavigationButtons from "@/components/carousel/CarouselNavigationButtons";
+import CarouselDots from "@/components/carousel/CarouselDots";
 
 const carouselImages = [
   {

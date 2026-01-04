@@ -1,11 +1,11 @@
-import ProductsCarousel from "@/compoents/carousel/ProductsCarousel";
+import ProductsCarousel from "@/components/carousel/ProductsCarousel";
 import { products } from "@/data/products";
 import RatingsAndReviews from "./components/RatingsAndReviews";
 import Breadcrumb from "./components/Breadcrumb";
-import AddToCartButton from "@/compoents/ui/AddToCartButton";
+import AddToCartButton from "@/components/ui/AddToCartButton";
 import ProductGuarantees from "./components/ProductGuarantees";
 import ProductDetails from "./components/ProductDetails";
-import SaveButton from "@/compoents/cards/ProductCard/SaveButton";
+import SaveButton from "@/components/cards/ProductCard/SaveButton";
 import { PiShareFatFill } from "react-icons/pi";
 import Divider from "./components/Divider";
 import ProductDisclaimer from "./components/ProductDisclaimer";

@@ -1,4 +1,4 @@
-import Logo from "@/compoents/ui/Logo";
+import Logo from "@/components/ui/Logo";
 import SearchBoxDesktop from "./SearchBoxDesktop";
 import Link from "next/link";
 import { PiShoppingCartSimpleFill } from "react-icons/pi";

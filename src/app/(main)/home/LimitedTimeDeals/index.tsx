@@ -1,5 +1,5 @@
 import DealCountdown from "./DealCountdown";
-import ProductsIntroCardCarousel from "@/compoents/carousel/ProductsIntroCardCarousel";
+import ProductsIntroCardCarousel from "@/components/carousel/ProductsIntroCardCarousel";
 import { products } from "@/data/products";
 
 const LimitedTimeDeals = () => {

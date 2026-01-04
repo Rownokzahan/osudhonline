@@ -1,4 +1,4 @@
-import BaseCarousel from "@/compoents/carousel/BaseCarousel";
+import BaseCarousel from "@/components/carousel/BaseCarousel";
 import clsx from "clsx";
 import Image from "next/image";
 

@@ -1,4 +1,4 @@
-import ProductCard from "@/compoents/ui/ProductCard";
+import ProductCard from "@/components/ui/ProductCard";
 import { products } from "@/data/products";
 import FiltersSidebarDesktop from "./components/FiltersSidebarDesktop";
 import ProductsHeaderDesktop from "./components/ProductsHeaderDesktop";

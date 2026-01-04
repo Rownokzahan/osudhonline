@@ -1,6 +1,6 @@
 "use client";
 
-import CarouselDots from "@/compoents/carousel/CarouselDots";
+import CarouselDots from "@/components/carousel/CarouselDots";
 import useEmblaCarousel from "embla-carousel-react";
 import Image from "next/image";
 

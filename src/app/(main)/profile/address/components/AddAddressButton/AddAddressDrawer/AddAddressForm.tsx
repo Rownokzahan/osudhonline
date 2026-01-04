@@ -1,4 +1,4 @@
-import FormField from "@/compoents/form/FormField";
+import FormField from "@/components/form/FormField";
 import { useForm } from "react-hook-form";
 
 type AddressFormData = {

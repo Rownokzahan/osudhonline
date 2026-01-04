@@ -1,6 +1,6 @@
 "use client";
 
-import CarouselNavigationButtons from "@/compoents/carousel/CarouselNavigationButtons";
+import CarouselNavigationButtons from "@/components/carousel/CarouselNavigationButtons";
 import Autoplay from "embla-carousel-autoplay";
 import useEmblaCarousel from "embla-carousel-react";
 import Image from "next/image";

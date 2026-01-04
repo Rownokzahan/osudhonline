@@ -1,5 +1,5 @@
-import BaseCarousel from "@/compoents/carousel/BaseCarousel";
-import BaseCarouselItem from "@/compoents/carousel/BaseCarousel/BaseCarouselItem";
+import BaseCarousel from "@/components/carousel/BaseCarousel";
+import BaseCarouselItem from "@/components/carousel/BaseCarousel/BaseCarouselItem";
 
 const sliderImages = [
   "https://cdn.netmeds.tech/v2/plain-cake-860195/netmed/wrkr/nmz/company/2/applications/65f562c1504a59a67f529ad4/theme/pictures/free/original/theme-image-1756117616260.jpeg",

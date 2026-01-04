@@ -1,7 +1,7 @@
-import AddToCartButton from "@/compoents/ui/AddToCartButton";
+import AddToCartButton from "@/components/ui/AddToCartButton";
 import ProductImageCarouselDesktop from "./ProductImageCarouselDesktop";
 import ProductImageCarouselMobile from "./ProductImageCarouselMobile";
-import SaveButton from "@/compoents/cards/ProductCard/SaveButton";
+import SaveButton from "@/components/cards/ProductCard/SaveButton";
 import { PiShareFatFill } from "react-icons/pi";
 
 const ProductImageSection = () => {

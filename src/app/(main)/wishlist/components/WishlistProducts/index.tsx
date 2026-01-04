@@ -1,4 +1,4 @@
-import ProductCard from "@/compoents/ui/ProductCard";
+import ProductCard from "@/components/ui/ProductCard";
 import { Product } from "@/types";
 
 const wishlist: Product[] = [

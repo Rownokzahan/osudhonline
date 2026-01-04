@@ -1,4 +1,4 @@
-import ProductsIntroCardCarousel from "@/compoents/carousel/ProductsIntroCardCarousel";
+import ProductsIntroCardCarousel from "@/components/carousel/ProductsIntroCardCarousel";
 import { products } from "@/data/products";
 import Image from "next/image";
 
