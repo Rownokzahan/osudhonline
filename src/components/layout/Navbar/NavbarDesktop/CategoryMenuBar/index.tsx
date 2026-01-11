@@ -1,7 +1,19 @@
 import Image from "next/image";
 import Link from "next/link";
 
-const categories = [
+export type SubmenuItem = {
+  label: string;
+  href: string;
+};
+
+export type Category = {
+  label: string;
+  image: string;
+  href: string;
+  submenu: SubmenuItem[];
+};
+
+const categories: Category[] = [
   {
     label: "All Categories",
     image: "/images/categories/all-categories.avif",
@@ -11,31 +23,28 @@ const categories = [
   {
     label: "Medicine",
     image: "/images/categories/medicine.avif",
-    href: "",
-    submenu: [
-      { label: "All Medicines", href: "/all-medicines" },
-      { label: "Order Online", href: "" },
-    ],
-  },
-  {
-    label: "Lab Tests",
-    image: "/images/categories/lab-tests.avif",
-    href: "",
+    href: "/all-medicines",
     submenu: [],
   },
+  // {
+  //   label: "Lab Tests",
+  //   image: "/images/categories/lab-tests.avif",
+  //   href: "",
+  //   submenu: [],
+  // },
   {
     label: "Beauty",
     image: "/images/categories/beauty.avif",
     href: "",
     submenu: [
-      { label: "Fragrances", href: "" },
-      { label: "Hair", href: "" },
-      { label: "Men's Grooming", href: "" },
-      { label: "Make-Up", href: "" },
-      { label: "Mom & Baby", href: "" },
-      { label: "Personal Care", href: "" },
-      { label: "Skin Care", href: "" },
-      { label: "Tools & Appliances", href: "" },
+      { label: "Fragrances", href: "/collection/slug" },
+      { label: "Hair", href: "/collection/slug" },
+      { label: "Men's Grooming", href: "/collection/slug" },
+      { label: "Make-Up", href: "/collection/slug" },
+      { label: "Mom & Baby", href: "/collection/slug" },
+      { label: "Personal Care", href: "/collection/slug" },
+      { label: "Skin Care", href: "/collection/slug" },
+      { label: "Tools & Appliances", href: "/collection/slug" },
     ],
   },
   {
@@ -43,30 +52,30 @@ const categories = [
     image: "/images/categories/wellness.avif",
     href: "",
     submenu: [
-      { label: "Ayush", href: "" },
-      { label: "Fitness", href: "" },
-      { label: "Personal Care", href: "" },
-      { label: "Sexual Wellness", href: "" },
-      { label: "Mom & Baby", href: "" },
-      { label: "Diabetes Support", href: "" },
-      { label: "Devices", href: "" },
-      { label: "Surgical", href: "" },
-      { label: "Treatments", href: "" },
-      { label: "Eyewear", href: "" },
-      { label: "Veterinary", href: "" },
+      { label: "Ayush", href: "/collection/slug" },
+      { label: "Fitness", href: "/collection/slug" },
+      { label: "Personal Care", href: "/collection/slug" },
+      { label: "Sexual Wellness", href: "/collection/slug" },
+      { label: "Mom & Baby", href: "/collection/slug" },
+      { label: "Diabetes Support", href: "/collection/slug" },
+      { label: "Devices", href: "/collection/slug" },
+      { label: "Surgical", href: "/collection/slug" },
+      { label: "Treatments", href: "/collection/slug" },
+      { label: "Eyewear", href: "/collection/slug" },
+      { label: "Veterinary", href: "/collection/slug" },
     ],
   },
-  {
-    label: "Health Corner",
-    image: "/images/categories/health-corner.avif",
-    href: "",
-    submenu: [
-      { label: "Health Library", href: "" },
-      { label: "All About Cancers", href: "" },
-      { label: "Corona Awareness", href: "" },
-      { label: "Selfcare Tools", href: "" },
-    ],
-  },
+  // {
+  //   label: "Health Corner",
+  //   image: "/images/categories/health-corner.avif",
+  //   href: "",
+  //   submenu: [
+  //     { label: "Health Library", href: "" },
+  //     { label: "All About Cancers", href: "" },
+  //     { label: "Corona Awareness", href: "" },
+  //     { label: "Selfcare Tools", href: "" },
+  //   ],
+  // },
   {
     label: "Offers",
     image: "/images/categories/offers.avif",
@@ -78,7 +87,7 @@ const categories = [
 const CategoryMenuBar = () => {
   return (
     <div className="bg-secondary">
-      <div className="h-12 ui-container flex items-center justify-between gap-6">
+      <div className="h-12 ui-container flex items-center justify-between gap-16">
         {categories.map((cat) => (
           <div key={cat.label} className="h-full relative group/category">
             {/* Main category */}

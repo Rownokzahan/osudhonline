@@ -24,7 +24,7 @@ const ProductCard = ({ product }: ProductCardProps) => {
     <div className="p-4 sm:p-3 sm:border sm:rounded-3xl">
       <div className="relative">
         <Link
-          href={`product/${slug}`}
+          href={`/product/${slug}`}
           className="mb-4 sm:mb-3 grid grid-cols-[80px_1fr] sm:grid-cols-1 gap-2 sm:gap-3"
         >
           <Image
