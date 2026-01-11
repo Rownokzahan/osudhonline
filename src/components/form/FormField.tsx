@@ -1,3 +1,4 @@
+import clsx from "clsx";
 import { HTMLInputTypeAttribute } from "react";
 import { FieldError } from "react-hook-form";
 
@@ -19,8 +20,8 @@ const FormField = ({
   error,
 }: FormFieldProps) => {
   return (
-    <div className="grid space-y-1 relative">
-      <label htmlFor={id} className="text-sm font-medium text-dark-light">
+    <div className="grid relative">
+      <label htmlFor={id} className="text-sm font-medium text-dark-light/80">
         {label}
       </label>
 
@@ -29,13 +30,17 @@ const FormField = ({
         type={type}
         placeholder={placeholder}
         {...registerProps}
-        className={`pb-1 border-b-2 outline-0 duration-300 ${
-          error ? "border-red-500" : "focus-visible:border-b-secondary"
-        }`}
+        className={clsx(
+          "py-1 border-b-2 outline-none transition-colors duration-300",
+          "placeholder:text-gray-300 placeholder:font-light",
+          error
+            ? "border-b-red-500"
+            : "border-b-gray-200 focus-visible:border-b-secondary"
+        )}
       />
 
       {error && (
-        <p className="text-red-500 text-sm absolute top-full">
+        <p className="mt-0.5 text-red-500 text-xs absolute top-full h-0">
           {error.message}
         </p>
       )}

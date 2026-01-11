@@ -30,10 +30,10 @@ const groups: Group[] = [
   {
     title: "Shopping",
     links: [
-      { label: "Medicines A To Z", href: "all-medicines" },
+      { label: "Medicines A To Z", href: "/all-medicines" },
       { label: "Shop By Categories", href: "all-categories" },
       { label: "Offers / Coupons", href: "#" },
-      { label: "FAQs", href: "all-faqs" },
+      { label: "FAQs", href: "/all-faqs" },
     ],
   },
 ];

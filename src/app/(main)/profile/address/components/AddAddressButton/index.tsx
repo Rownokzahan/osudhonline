@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import AddAddressDrawer from "./AddAddressButton/AddAddressDrawer";
+import AddAddressDrawer from "./AddAddressDrawer";
 
 const AddAddressButton = () => {
   const [isOpen, setIsOpen] = useState(false);
