@@ -23,7 +23,7 @@ const CarouselProductCard = ({ product }: CarouselProductCardProps) => {
   return (
     <div className="p-2 rounded-2xl bg-white">
       <div className="relative">
-        <Link href={`product/${slug}`}>
+        <Link href={`/product/${slug}`}>
           <Image
             width={180}
             height={180}

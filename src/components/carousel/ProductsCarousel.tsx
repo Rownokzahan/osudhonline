@@ -7,7 +7,7 @@ import clsx from "clsx";
 import CarouselProductCard from "../ui/CarouselProductCard";
 
 interface ProductsCarouselProps {
-  label: string;
+  label?: string;
   products: Product[];
   className?: string;
 }
@@ -27,8 +27,12 @@ const ProductsCarousel = ({
   });
 
   return (
-    <section className={clsx("mt-6", className)}>
-      <h3 className="mb-2 px-4 sm:px-0 sm:text-2xl font-black">{label}</h3>
+    <section className={className}>
+      {label && (
+        <h3 className="mt-6 mb-2 px-4 sm:px-0 sm:text-2xl font-black">
+          {label}
+        </h3>
+      )}
 
       <div className="relative">
         <div

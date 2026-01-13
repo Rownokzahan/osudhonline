@@ -15,13 +15,11 @@ const CartPage = () => {
         </div>
       </section>
 
-      <section className="mt-6">
-        <ProductsCarousel
-          label="Featured products"
-          products={products}
-          className="sm:px-4 lg:px-0"
-        />
-      </section>
+      <ProductsCarousel
+        label="Featured products"
+        products={products}
+        className="sm:px-4 lg:px-0"
+      />
     </div>
   );
 };
