@@ -22,11 +22,11 @@ const RangeSlider = ({
   const [maxValue, setMaxValue] = useState(defaultMax);
 
   const handleMinChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setMinValue(Math.min(Number(event.target.value), maxValue - 1));
+    setMinValue(Math.min(Number(event.target.value), maxValue));
   };
 
   const handleMaxChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setMaxValue(Math.max(Number(event.target.value), minValue + 1));
+    setMaxValue(Math.max(Number(event.target.value), minValue));
   };
 
   // Commit final value
@@ -34,10 +34,21 @@ const RangeSlider = ({
     onRangeChange(minValue, maxValue);
   };
 
-  const progressLeft =
-    ((minValue - defaultMin) / (defaultMax - defaultMin)) * 100;
-  const progressWidth =
-    ((maxValue - minValue) / (defaultMax - defaultMin)) * 100;
+  // Compute progress bar
+  const getProgress = () => {
+    const range = defaultMax - defaultMin;
+
+    if (range === 0) {
+      return { progressLeft: 0, progressWidth: 100 };
+    }
+
+    return {
+      progressLeft: ((minValue - defaultMin) / range) * 100,
+      progressWidth: ((maxValue - minValue) / range) * 100,
+    };
+  };
+
+  const { progressLeft, progressWidth } = getProgress();
 
   const formatValue = (value: number) => {
     return unitPosition === "before" ? `${unit}${value}` : `${value}${unit}`;
@@ -71,7 +82,7 @@ const RangeSlider = ({
           onChange={handleMinChange}
           onMouseUp={handleCommit}
           onTouchEnd={handleCommit}
-          className={clsx("rangeSlider", minValue === defaultMax - 1 && "z-10")} // Ensure min thumb stays selectable when both thumbs meet at the end
+          className={clsx("rangeSlider", defaultMax - minValue < 2 && "z-10")} // Ensure min thumb stays selectable when both thumbs meet at the end
         />
 
         {/* Max Slider */}
@@ -83,11 +94,14 @@ const RangeSlider = ({
           onChange={handleMaxChange}
           onMouseUp={handleCommit}
           onTouchEnd={handleCommit}
-          className="rangeSlider"
+          className={clsx(
+            "rangeSlider",
+            defaultMax === defaultMin && "scale-x-[-1]",
+          )}
         />
       </div>
     </>
   );
-};
+};;
 
 export default RangeSlider;
