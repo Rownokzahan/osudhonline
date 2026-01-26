@@ -20,7 +20,7 @@ const ProductPage = () => {
         <ProductImageSection />
 
         <div className="flex-1 min-w-0">
-          <div className="flex justify-between items-start">
+          <div className="flex justify-between items-start relative">
             <div className="px-4 lg:px-0">
               <h3 className="text-xs sm:text-lg sm:font-bold text-secondary">
                 Sugar Free
@@ -38,7 +38,8 @@ const ProductPage = () => {
 
             <div className="hidden lg:flex gap-1">
               <SaveButton productId="01" />
-              <button>
+
+              <button className="size-7 me-9">
                 <PiShareFatFill size={24} className="text-dark-light" />
               </button>
             </div>
@@ -57,7 +58,7 @@ const ProductPage = () => {
               </p>
             </div>
 
-            <AddToCartButton productId="01" className="lg:hidden" />
+            <AddToCartButton productId="01" className="lg:hidden w-28" />
           </div>
 
           <ProductGuarantees />

@@ -12,13 +12,14 @@ const ProductImageSection = () => {
         <AddToCartButton productId="01" className="w-92! ms-auto me-2" />
       </div>
 
-      <div className="lg:hidden relative">
+      <div className="lg:hidden relative me-2">
         <ProductImageCarouselMobile />
 
-        <div className="absolute top-0 right-2 flex flex-col gap-2">
-          <SaveButton productId="01" />
+        <SaveButton productId="01" />
+
+        <div className="absolute top-10 right-1">
           <button>
-            <PiShareFatFill size={24} className="text-dark-light" />
+            <PiShareFatFill size={22} className="text-dark-light" />
           </button>
         </div>
       </div>
